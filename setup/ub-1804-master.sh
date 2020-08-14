@@ -11,6 +11,6 @@ IP_ADRESS=92.39.139.7
 kubeadm init --pod-network-cidr=$POD_NETWORK_CIDR --service-cidr=$SERVICE_CIDR --apiserver-cert-extra-sans=$DNS_NAME --apiserver-cert-extra-sans=$IP_ADRESS
 
 # install Flannel pod network
-wget https://raw.githubusercontent.com/sixeyed/k8s-win/master/setup/flannel/kube-flannel-hybrid.yaml
+wget https://raw.githubusercontent.com/icqparty/k8s-win/master/setup/flannel/kube-flannel-hybrid.yaml
 
 kubectl --kubeconfig='/etc/kubernetes/admin.conf' apply -f kube-flannel-hybrid.yaml
